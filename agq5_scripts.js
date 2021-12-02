@@ -75,3 +75,16 @@ number10 = () => {
 number11 = (color) => {
   document.body.style.background = color;
 };
+
+// * Number 12 script
+number12 = () => {
+  let rand = Math.floor(Math.random() * 3);
+  if (rand === 0)
+    document.querySelector("a").setAttribute("href", "http://slashdot.org/");
+  else if (rand === 1)
+    document
+      .querySelector("a")
+      .setAttribute("href", "http://www.thinkgeek.com/");
+  else if (rand === 2)
+    document.querySelector("a").setAttribute("href", "http://despair.com/");
+};
