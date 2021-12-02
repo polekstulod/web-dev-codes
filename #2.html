@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>#2</title>
+    <style>
+      div.remarks {
+        font-size: small;
+      }
+      td.labels {
+        text-align: right;
+      }
+      p.title {
+        font-size: large;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <p class="title">Personal Information</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="labels">First Name:</td>
+        <td><input type="text" name="" id="" /></td>
+      </tr>
+      <tr>
+        <td class="labels">Last Name:</td>
+        <td><input type="text" name="" id="" /></td>
+      </tr>
+      <tr>
+        <td class="labels">Date of Birth:</td>
+        <td>
+          <div class="select-date">
+            <select id="select-month">
+              <option value="0">January</option>
+              <option value="1">February</option>
+              <option value="2">March</option>
+              <option value="3">April</option>
+              <option value="4">May</option>
+              <option value="5">June</option>
+              <option value="6">July</option>
+              <option value="7">August</option>
+              <option value="8">September</option>
+              <option value="9">October</option>
+              <option value="10">November</option>
+              <option value="11">December</option>
+            </select>
+            <select id="select-day"></select>
+            <select id="select-year"></select>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="labels">Gender:</td>
+        <td>
+          <select name="" id="">
+            <option value="">Choose a gender</option>
+            <option value="">Male</option>
+            <option value="">Female</option>
+            <option value="">Non-binary</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><p class="title">Account Information</p></td>
+      </tr>
+      <tr>
+        <td class="labels">Email:</td>
+        <td><input type="email" name="" id="" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <div class="remarks">(Your email address will be your username)</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="labels">Re-type Email:</td>
+        <td><input type="email" name="" id="" /></td>
+      </tr>
+      <tr>
+        <td class="labels">Password:</td>
+        <td><input type="password" name="" id="" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <div class="remarks">
+            (Min. 8 characters, 1 number, case-sensitive)
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="labels">Re-type Password:</td>
+        <td><input type="password" name="" id="" /></td>
+      </tr>
+      <tr>
+        <td class="labels">Security Question:</td>
+        <td>
+          <select name="" id="">
+            <option value="">Choose a security question</option>
+            <option value="">Security Question#1</option>
+            <option value="">Security Question#2</option>
+            <option value="">Security Question#3</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="labels">Security Answer:</td>
+        <td><input type="text" name="" id="" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><div class="remarks">(Not case-sensitive)</div></td>
+      </tr>
+      <tr>
+        <td><p class="title">Contact Information</p></td>
+      </tr>
+      <tr>
+        <td class="labels">Address:</td>
+        <td><input type="text" name="" id="" /></td>
+      </tr>
+      <tr>
+        <td class="labels">City:</td>
+        <td><input type="text" name="" id="" /></td>
+      </tr>
+      <tr>
+        <td class="labels">State:</td>
+        <td>
+          <select name="" id="">
+            <option value="">Choose a state</option>
+            <option value="">State#1</option>
+            <option value="">State#2</option>
+            <option value="">State#3</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="labels">Zip Code:</td>
+        <td>
+          <input type="text" name="" id="" size="10" />&nbsp;
+          <button disabled="disabled">Optional</button>
+        </td>
+      </tr>
+      <tr>
+        <td class="labels">Phone:</td>
+        <td>
+          <input type="text" name="" id="" size="7" />&nbsp<select
+            name=""
+            id=""
+          >
+            <option value="">Mobile</option>
+            <option value="">Telephone</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><div class="remarks">No spaces or dashes</div></td>
+      </tr>
+    </table>
+    <script
+      type="text/javascript"
+      src="http://code.jQuery.com/jquery-latest.min.js"
+    ></script>
+    <script>
+      var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+        today = new Date(),
+        // default targetDate is christmas
+        targetDate = new Date(today.getFullYear(), 11, 25);
+
+      setDate(targetDate);
+      setYears(5); // set the next five years in dropdown
+
+      $("#select-month").change(function () {
+        var monthIndex = $("#select-month").val();
+        setDays(monthIndex);
+      });
+
+      function setDate(date) {
+        setDays(date.getMonth());
+        $("#select-day").val(date.getDate());
+        $("#select-month").val(date.getMonth());
+        $("#select-year").val(date.getFullYear());
+      }
+
+      // make sure the number of days correspond with the selected month
+      function setDays(monthIndex) {
+        var optionCount = $("#select-day option").length,
+          daysCount = daysInMonth[monthIndex];
+
+        if (optionCount < daysCount) {
+          for (var i = optionCount; i < daysCount; i++) {
+            $("#select-day").append(
+              $("<option></option>")
+                .attr("value", i + 1)
+                .text(i + 1)
+            );
+          }
+        } else {
+          for (var i = daysCount; i < optionCount; i++) {
+            var optionItem = "#select-day option[value=" + (i + 1) + "]";
+            $(optionItem).remove();
+          }
+        }
+      }
+
+      function setYears(val) {
+        var year = today.getFullYear();
+        for (var i = 0; i < val; i++) {
+          $("#select-year").append(
+            $("<option></option>")
+              .attr("value", year + i)
+              .text(year + i)
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <style>
+      #main {
+        display: inline-block;
+        height: 500;
+        width: 400;
+        color: #d2d636;
+      }
+      p {
+        font-size: 20px;
+        padding: 10px 10px;
+        margin: 0;
+      }
+      .headfoot {
+        display: flex;
+        background-color: #df8705;
+      }
+      .container {
+        background-color: #222536;
+        display: flex;
+        border: 5px pink;
+      }
+      .items {
+        display: flex;
+        flex-direction: column;
+        font-size: 18px;
+        padding: 5px 10px;
+        gap: 15px;
+      }
+      .left {
+        align-items: flex-end;
+        padding-left: 30px;
+      }
+      .right {
+        align-items: flex-start;
+        padding-right: 30px;
+      }
+      .buttons {
+        border-style: None;
+        border-width: 0px;
+        color: #ffffff;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 10px 0px 10px;
+      }
+      .buttons:hover {
+        opacity: 0.6;
+      }
+
+      #submit {
+        background-color: #62af5e;
+        margin-right: 5px;
+      }
+      #cancel {
+        background-color: #d9544f;
+        margin-right: 10px;
+      }
+      .foot {
+        justify-content: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div class="headfoot">
+        <p>Sign Up</p>
+      </div>
+      <div class="container">
+        <div class="items left">
+          <label for="fn">First Name</label><label for="ln">Last Name</label
+          ><label for="dob">Date of Birth</label
+          ><label for="gender">Gender</label><label for="country">Country</label
+          ><label for="email">E-mail</label><label for="phone">Phone</label
+          ><label for="pass">Password</label
+          ><label for="cpass">Confirm Password</label>
+        </div>
+        <div class="items right">
+          <input type="text" id="fn" placeholder="Enter First Name" />
+          <input type="text" id="ln" placeholder="Enter Last Name" />
+          <input type="date" name="" id="dob" />
+          <div>
+            <input type="radio" name="" id="gender" />Male
+            <input type="radio" name="" id="gender" />Female
+          </div>
+          <select name="" id="country">
+            <option>Country</option>
+            <option>Country1</option>
+          </select>
+          <input type="email" name="" id="email" placeholder="Enter E-mail" />
+          <input type="number" name="" id="phone" placeholder="Enter Phone" />
+          <input type="password" name="" id="pass" />
+          <input type="password" name="" id="cpass" />
+          <div>
+            <input type="checkbox" name="" id="" />I Agree to the Terms of use
+          </div>
+        </div>
+      </div>
+      <div class="headfoot foot">
+        <button type="submit" id="submit" class="buttons">Submit</button>
+        <button type="reset" id="cancel" class="buttons">Reset</button>
+      </div>
+    </div>
+  </body>
+</html>
