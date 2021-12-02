@@ -65,3 +65,8 @@ number9 = () => {
     }<br>`;
   }
 };
+
+// * Number 10 script
+number10 = () => {
+  alert("Duh, you are hovering!!");
+};
