@@ -70,3 +70,8 @@ number9 = () => {
 number10 = () => {
   alert("Duh, you are hovering!!");
 };
+
+// * Number 11 script
+number11 = (color) => {
+  document.body.style.background = color;
+};
