@@ -1,0 +1,21 @@
+body {
+  background-color: #6af79a;
+  background-image: url("blob_11-5-157.svg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: 50%;
+}
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 300px;
+  font-family: "Indie Flower", cursive;
+}
+#title {
+  font-weight: bold;
+  font-size: 3em;
+}
+#output {
+  font-size: 2em;
+}
