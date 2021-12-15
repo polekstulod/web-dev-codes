@@ -1,0 +1,68 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+  background-color: #f90716;
+}
+h1 {
+  margin: 20px;
+}
+#main {
+  display: flex;
+  height: 275px;
+  width: 500px;
+  background-color: #ff5403;
+  flex-direction: column;
+  align-items: center;
+  color: #fff323;
+  font-size: 20px;
+  font-family: "Righteous", cursive;
+  box-shadow: 3px 3px 6px 0px #ffca03 inset, -3px -3px 6px 1px #fff323 inset;
+  border-radius: 20px;
+}
+button {
+  margin-top: 20px;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #ffca03;
+  color: #ffca03;
+  background: 0 0;
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+  font-weight: 800;
+  font-size: 16px;
+  height: 42px;
+  font-family: "Righteous", cursive;
+}
+button:hover {
+  background-color: #f90716;
+  color: #fff323;
+}
+#temp {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-family: "Righteous", cursive;
+  vertical-align: baseline;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: 0.16px;
+  border-radius: 0;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-bottom: 1px solid #ffca03;
+  background-color: transparent;
+  padding: 0 16px;
+  color: #fff323;
+  transition: background-color 70ms cubic-bezier(0.2, 0, 0.38, 0.9),
+    outline 70ms cubic-bezier(0.2, 0, 0.38, 0.9);
+}
+#temp:focus {
+  outline: 2px solid #ffca03;
+  outline-offset: -2px;
+}
