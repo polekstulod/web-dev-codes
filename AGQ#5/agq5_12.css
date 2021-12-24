@@ -1,0 +1,13 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(45deg, red, blue);
+}
+a {
+  font-family: "Secular One", sans-serif;
+  font-size: 50px;
+  color: aliceblue;
+}
