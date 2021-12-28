@@ -3,6 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-family: "Josefin Sans", sans-serif;
 }
 .main {
   border-style: solid;
@@ -13,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 500px;
+  gap: 10px;
 }
 .question {
   border-style: solid;
