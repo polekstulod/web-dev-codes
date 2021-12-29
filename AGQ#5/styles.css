@@ -19,4 +19,8 @@ body {
 .question {
   border-style: solid;
   border-width: 3px;
+  padding: 10px;
+}
+.quest {
+  margin-top: 0;
 }
