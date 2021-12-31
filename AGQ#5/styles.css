@@ -10,6 +10,9 @@ body {
   border-width: 3px;
   padding: 10px;
 }
+.title {
+  text-align: center;
+}
 .questions {
   display: flex;
   flex-direction: column;
