@@ -23,6 +23,7 @@ body {
   flex-direction: column;
   width: 500px;
   gap: 10px;
+  margin: 0px 10px 10px;
 }
 .question {
   padding: 10px;
